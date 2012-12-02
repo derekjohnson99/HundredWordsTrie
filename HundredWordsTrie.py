@@ -3,6 +3,10 @@
 '''
 I want to create a trie structure of the 100 most commonly used words,
 and create a GraphViz diagram of it.
+
+Usage:
+$ python HundredWordsTrie.py > HundredWordsTrie.dot
+$ dot -Tpng HundredWordsTrie.dot
 '''
 
 HundredWords = [ "the", "be", "to", "of", "and", "a", "in", "that", "have", "I",
@@ -20,7 +24,12 @@ HundredWords = [ "the", "be", "to", "of", "and", "a", "in", "that", "have", "I",
                  ]
 
 class Node(object):
+    # Using a class attribute variable to give each node a unique
+    # identifier. GraphViz defaults to using the node label as the
+    # node Id, but here letters will be repeated, so a unique node Id
+    # is required.
     count = 0
+    
     def __init__(self, letter='', final=False):
         self.letter = letter
         self.final = final
