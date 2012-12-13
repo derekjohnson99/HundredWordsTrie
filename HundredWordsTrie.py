@@ -4,6 +4,9 @@
 I want to create a trie structure of the 100 most commonly used words,
 and create a GraphViz diagram of it.
 
+The list is taken from:
+http://en.wikipedia.org/wiki/Most_common_words_in_English
+
 Usage:
 $ python HundredWordsTrie.py > HundredWordsTrie.dot
 $ dot -Tpng HundredWordsTrie.dot
